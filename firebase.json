@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "public": "dist/mdb-angular-boilerplate",
+    "public": "dist/jononi-assistant",
     "ignore": [
       "firebase.json",
       "**/.*",
