@@ -17,28 +17,10 @@ export class DashboardComponent implements OnInit, OnDestroy {
   projectsSub: Subscription;
   projects = [
     {
-      title: 'Project 1',
-      description: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit.',
+      title: 'জ্বর',
       photoUrl:
-        'https://mdbootstrap.com/img/Photos/Lightbox/Thumbnail/img%20(97).jpg'
-    },
-    {
-      title: 'Project 2',
-      description: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit.',
-      photoUrl:
-        'https://mdbootstrap.com/img/Photos/Lightbox/Thumbnail/img%20(98).jpg'
-    },
-    {
-      title: 'Project 3',
-      description: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit.',
-      photoUrl:
-        'https://mdbootstrap.com/img/Photos/Lightbox/Thumbnail/img%20(99).jpg'
-    },
-    {
-      title: 'Project 4',
-      description: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit.',
-      photoUrl:
-        'https://mdbootstrap.com/img/Photos/Lightbox/Thumbnail/img%20(95).jpg'
+      'https://mdbootstrap.com/img/Photos/Lightbox/Thumbnail/img%20(97).jpg',
+      description: 'জ্বর এর জন্য ন্যাপা সেবন করুন। করোনা সন্দেহে ইথানল সেবন করছিলেন। সেটি আশু বন্ধ করুন। গলা ব্যাথার জন্য acetaminophen সেবন করতে পারেন। ডঃ ইসমাইল - ০১৮১২৩৪৫৬৭৮ ইন্টার্ন, ময়মনসিংহ মেডিকেল কলেজ'
     }
   ];
 
@@ -46,29 +28,16 @@ export class DashboardComponent implements OnInit, OnDestroy {
   customers: Customer[] = [
     {
       id: 1,
-      name: 'Example customer 1',
-      description: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit.'
+      name: 'Doctor 1',
+      description: 'Dhanmondi',
+      PhoneNumber: '01849325209'
     },
     {
       id: 2,
-      name: 'Example customer 2',
-      description: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit.'
+      name: 'Doctor 2',
+      description: 'jatrabari',
+      PhoneNumber: '0184935209'
     },
-    {
-      id: 3,
-      name: 'Example customer 3',
-      description: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit.'
-    },
-    {
-      id: 4,
-      name: 'Example customer 4',
-      description: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit.'
-    },
-    {
-      id: 5,
-      name: 'Example customer 5',
-      description: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit.'
-    }
   ];
 
   constructor(
