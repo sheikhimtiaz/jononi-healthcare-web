@@ -1,0 +1,22 @@
+<div class="white px-4 section-header">
+  <h3>Doctor's list</h3>
+  <p class="pt-3">Find your nearest doctor.</p>
+  <p class="pt-3">[ATTENTION: Right now this is a simple UI to show doctor information, but using this information we can search for nearby doctors in future. near future. but the interaction needs to be fixed, how they search, find and communicate with a doctor. That is huge feature with complex calculations and connections.]</p>
+  <p class="pt-3">[nearest doctor will not be a separate feature, while creating isses/cases they will add/send request to the nearest doctor. Also the doctor will find nearest place issues/cases.]</p>
+</div>
+
+<div class="container-fluid pt-5 pb-5">
+  <div class="pt-3 pb-5">
+    <button mdbBtn color="primary" (click)="onAddCustomer()">Add New Doctor</button>
+
+    <div *ngIf="customers" class="mt-4 white">
+      <app-customers-list [customers]="customers" (customerEdited)="onCustomerEdit($event)" (customerDeleted)="onCustomerDelete($event)"></app-customers-list>
+    </div>
+
+    <div *ngIf="isLoading$ | async" class="d-flex justify-content-center align-items-center" style="margin-top: 200px">
+      <div class="spinner-grow text-primary" role="status" style="width: 4rem; height: 4rem;">
+        <span class="sr-only">Loading...</span>
+      </div>
+    </div>
+  </div>
+</div>
