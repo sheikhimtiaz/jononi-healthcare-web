@@ -17,8 +17,8 @@ export class CustomersService {
     }
   }
 
-  add(customer: Customer, userId: string) {
-    const customers = this.db.list(`customers/${userId}`);
+  add(customer: Customer, _userId: string) {
+    const customers = this.db.list(`customers/`);
     return customers.push(customer);
   }
 
@@ -27,17 +27,17 @@ export class CustomersService {
 
     if (userId) {
       customers.forEach( (customer: Customer) => {
-        this.db.list(`customers/${userId}`).push(customer);
+        this.db.list(`customers/`).push(customer);
       });
     }
   }
 
-  get(userId: string) {
-    return this.db.list(`customers/${userId}`).snapshotChanges();
+  get(_userId: string) {
+    return this.db.list(`customers/`).snapshotChanges();
   }
 
-  update(customer: Customer, userId: string) {
-    return of(this.db.object(`customers/${userId}/` + customer.key)
+  update(customer: Customer, _userId: string) {
+    return of(this.db.object(`customers/` + customer.key)
       .update({
         id: customer.id,
         name: customer.name,
@@ -46,7 +46,7 @@ export class CustomersService {
       }));
   }
 
-  delete(customer: Customer, userId: string) {
-    return this.db.object(`customers/${userId}/` + customer.key).remove();
+  delete(customer: Customer, _userId: string) {
+    return this.db.object(`customers/` + customer.key).remove();
   }
 }

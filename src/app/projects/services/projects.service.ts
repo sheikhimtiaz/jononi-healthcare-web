@@ -19,24 +19,23 @@ export class ProjectsService {
     }
   }
 
-  add(project: Project, userId: string) {
-    const projects = this.db.list(`projects/${userId}`);
+  add(project: Project, _userId: string) {
+    const projects = this.db.list(`projects/`);
     return projects.push(project);
   }
 
   addProjects(projects: Project[]) {
-    const userId = this.userId;
     projects.forEach( (project: Project) => {
-      this.db.list(`projects/${userId}`).push(project);
+      this.db.list(`projects/`).push(project);
     });
   }
 
-  get(userId: string) {
-    return this.db.list(`projects/${userId}`).snapshotChanges();
+  get(_userId: string) {
+    return this.db.list(`projects/`).snapshotChanges();
   }
 
-  update(project: Project, userId: string) {
-    return of(this.db.object(`projects/${userId}/` + project.key)
+  update(project: Project, _userId: string) {
+    return of(this.db.object(`projects/` + project.key)
       .update({
         title: project.title,
         description: project.description,
@@ -44,7 +43,7 @@ export class ProjectsService {
       }));
   }
 
-  delete(project: Project, userId: string) {
-    return this.db.object(`projects/${userId}/` + project.key).remove();
+  delete(project: Project, _userId: string) {
+    return this.db.object(`projects/` + project.key).remove();
   }
 }
