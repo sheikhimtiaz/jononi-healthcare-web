@@ -1,11 +1,13 @@
 export const environment = {
   production: true,
   firebase: {
-    apiKey: "AIzaSyCtKefu6jtnavYPEvHjIDsQ2FoE_NqajIQ",
-    authDomain: "jononi-assistant.firebaseapp.com",
-    databaseURL: "https://jononi-assistant.firebaseio.com",
-    projectId: "jononi-assistant",
-    storageBucket: "jononi-assistant.appspot.com",
-    messagingSenderId: "393050620220"
+    apiKey: "AIzaSyAXChomM8WjQHJHzG7QL_B1tri3RlNmkfs",
+    authDomain: "jononi-healthcare.firebaseapp.com",
+    databaseURL: "https://jononi-healthcare.firebaseio.com",
+    projectId: "jononi-healthcare",
+    storageBucket: "jononi-healthcare.appspot.com",
+    messagingSenderId: "669825220218",
+    appId: "1:669825220218:web:d117e95aac319160fc05c3",
+    measurementId: "G-3Q6ZC90Y2H"
   }
 };

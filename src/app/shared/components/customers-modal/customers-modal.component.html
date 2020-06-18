@@ -27,8 +27,8 @@
 
       <div class="md-form">
         <textarea type="text" id="description" name="description" class="md-textarea form-control" [(ngModel)]="customer.description" mdbInput mdbValidate [validateSuccess]="false" #description="ngModel" required></textarea>
-        <label for="description">Description</label>
-        <mdb-error *ngIf="description && description.invalid && (description.dirty || description.touched)">Description is required</mdb-error>
+        <label for="description">Address</label>
+        <mdb-error *ngIf="description && description.invalid && (description.dirty || description.touched)">Address is required</mdb-error>
       </div>
     </form>
   </div>

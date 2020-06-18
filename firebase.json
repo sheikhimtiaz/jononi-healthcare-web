@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "public": "dist/jononi-assistant",
+    "public": "dist/jononi-healthcare",
     "ignore": [
       "firebase.json",
       "**/.*",
